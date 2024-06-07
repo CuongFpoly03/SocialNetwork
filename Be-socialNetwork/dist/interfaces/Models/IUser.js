@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserRole = exports.UserStatus = void 0;
+exports.UserTypeAuth = exports.UserRole = exports.UserStatus = void 0;
 var UserStatus;
 (function (UserStatus) {
     UserStatus["active"] = "active";
@@ -13,3 +13,8 @@ var UserRole;
     UserRole["user"] = "user";
     UserRole["root"] = "root";
 })(UserRole || (exports.UserRole = UserRole = {}));
+var UserTypeAuth;
+(function (UserTypeAuth) {
+    UserTypeAuth["local"] = "local";
+    UserTypeAuth["google"] = "google";
+})(UserTypeAuth || (exports.UserTypeAuth = UserTypeAuth = {}));

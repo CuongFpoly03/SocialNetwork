@@ -7,7 +7,7 @@ class SecurityImproving {
         _express.set('trust proxy', 1);
         
         _express.use((req, res, next)=>{
-            res.locals.user = req.user;
+            // res.locals.user = req.user;
             res.locals.app = Locals.config();
             next()
         });

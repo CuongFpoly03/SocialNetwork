@@ -2,7 +2,7 @@ import { Application } from "express";
 import Log from "../middlewares/Log";
 import morgan from "morgan";
 import Locals from "./Local";
-import apiRoutes from "../routes/Api/api";
+import apiRoutes from "../routes/Api/Api";
 import webRouter from '../routes/Web/web';
 class Routes {
     public static mountWeb(_express: Application): Application{  

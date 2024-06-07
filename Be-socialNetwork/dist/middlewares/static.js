@@ -8,7 +8,7 @@ const path_1 = __importDefault(require("path"));
 class Statics {
     static mount(_express) {
         _express.use(express_1.default.json());
-        _express.use(express_1.default.urlencoded({ extended: false }));
+        _express.use(express_1.default.urlencoded({ extended: true }));
         _express.use(express_1.default.static(path_1.default.join(__dirname, "public")));
         return _express;
     }
