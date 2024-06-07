@@ -9,7 +9,7 @@ class ExceptionHandler {
             this.handleApiError(error, res);
             return;
         }
-        this.handleGenericError(res);
+        this.handleGenericError(error, res);
     }
     handleApiError(error, res) {
         res.status(error.status).json({
@@ -19,10 +19,11 @@ class ExceptionHandler {
             message: error.message,
         });
     }
-    handleGenericError(res) {
+    handleGenericError(error, res) {
         res.status(500).json({
             status: 'error',
             code: 500,
+            stack: error.stack,
             message: 'Internal Server Error',
         });
     }

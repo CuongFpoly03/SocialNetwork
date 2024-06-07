@@ -6,6 +6,5 @@ export const validate = (schema: any, objectValidate: any) => {
     const errors = error.details.map((item: any) => item.message);
     throw new ConflictError(errors);
   }
-
   return true;
 };

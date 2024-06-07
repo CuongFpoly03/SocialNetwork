@@ -7,6 +7,11 @@ export enum UserRole {
     admin = "admin", user = "user", root = "root"
 }
 
+export enum UserTypeAuth {
+    local = "local",
+    google = "google"
+}
+
 export interface IUser {
     user_name: string
     user_email: string
@@ -17,6 +22,7 @@ export interface IUser {
     user_role: UserRole
     user_avatar: string
     user_gender: string
+    user_auth_type : UserTypeAuth
     createAt: Date | string
     updateAt: Date | string
 }

@@ -22,7 +22,7 @@ class Http {
             cookie: { secure: false },
             // store : new (MongoDBStore as any)({
             //     uri: process.env.MONGOOSE_URL,
-            //     collection: 'sessions', 
+            //     collection: 'sessions',
             // })
         }));
         return _express;
